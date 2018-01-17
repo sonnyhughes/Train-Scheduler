@@ -4,12 +4,12 @@ $(document).ready(function(){
 	var trainData = new Firebase("https://train-scheduler-bf9a1.firebaseio.com/");
 
 	// Button to add Trains
-	$("#addTrainBtn").on("click", function(){
+	$("#addTrainButton").on("click", function(){
 
 		// Parses input values and attaches them to a variable
 		var trainName = $("#trainNameInput").val().trim();
-		var lineName = $("#lineInput").val().trim();
-		var destination = $("#destinationInput").val().trim();
+		var lineName = $("#lineNumberInput").val().trim();
+		var destination = $("#routeInput").val().trim();
 		var trainTimeInput = moment($("#trainTimeInput").val().trim(), "HH:mm").subtract(10, "years").format("X");;
 		var frequencyInput = $("#frequencyInput").val().trim();
 
@@ -32,8 +32,8 @@ $(document).ready(function(){
 
 		// Resets the input values after data is pushed
 		$("#trainNameInput").val("");
-		$("#lineInput").val("");
-		$("#destinationInput").val("");
+		$("#lineNumberInput").val("");
+		$("#routeInput").val("");
 		$("#trainTimeInput").val("");
 		$("#frequencyInput").val("");
 

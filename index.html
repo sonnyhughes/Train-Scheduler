@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 <head>
-	<title>Train Schedule</title>
+	<title>Train Scheduler</title>
 	<meta charset="UTF-8">
 	<!-- Latest compiled and minified Bootstrap CSS & JS Libraries -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -14,12 +14,10 @@
 
 <body>
 	<div class="container">
-
 		<div class="jumbotron col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<h1 class="text-center">Chicago Union Station</h1>
 			<h1 class="text-center" style="color: red;">✶ ✶ ✶ ✶</h1>
 		</div>
-
 
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -27,7 +25,7 @@
 				<!-- Current Trains -->
 				<div class="panel panel-info">
 					<div class="panel-heading">
-						<h2 class="panel-title"><strong>Current Train</strong></h2>
+						<h2 class="panel-title"><strong>Train Schedules</strong></h2>
 					</div>
 					<div class="panel-body">
 						<table class="table table-hover" id='trainTable'>
@@ -35,7 +33,7 @@
 								<tr>
 									<th>Train Name</th>
 									<th>Line #</th>
-									<th>Destination</th>
+									<th>Route</th>
 									<th>Frequency</th>
 									<th>Next Arrival</th>
 									<th>Minutes Away</th>
@@ -48,14 +46,14 @@
 					</div>
 				</div>
 
-				<!-- Add New Trains -->
+				<!-- Add new trains -->
 				<div class="panel panel-info">
 					<div class="panel-heading">
 						<h2 class="panel-title"><strong>Add a New Train</strong></h2>
 					</div>
 
+					<!-- Submission form for new trains -->
 					<div class="panel-body">
-						<!-- Entry Form -->
 						<form>
 							<div class="form-group">
 								<label for="">Train Name</label>
@@ -64,12 +62,12 @@
 
 							<div class="form-group">
 								<label for="">Line #</label>
-								<input type="text" class="form-control" id="lineInput">
+								<input type="text" class="form-control" id="lineNumberInput">
 							</div>
 
 							<div class="form-group">
-								<label for="">Destination</label>
-								<input type="text" class="form-control" id="destinationInput">
+								<label for="">Route</label>
+								<input type="text" class="form-control" id="routeInput">
 							</div>
 
 							<div class="form-group">
@@ -82,7 +80,7 @@
 								<input type="text" class="form-control" id="frequencyInput">
 							</div>
 							
-							<button type="submit" class="btn btn-info" id="addTrainBtn">Submit</button>
+							<button type="submit" class="btn btn-info" id="addTrainButton">Submit</button>
 						</form>
 					</div>
 				</div>
@@ -90,9 +88,9 @@
 		</div>
 	</div>
 
-	<!-- Firebase Reference -->
+	<!-- Firebase -->
 	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-	<!-- Moment.js Reference -->
+	<!-- Moment.js -->
  	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<!-- Javascript -->
 	<script src="assets/javascript/main.js"></script>
